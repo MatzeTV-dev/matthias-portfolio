@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matthias Dorner - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">&lt;MD&gt;</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">über mich</a></li>
+                <li><a href="#tech" class="nav-link">Tech Stack</a></li>
+                <li><a href="#experience" class="nav-link">Berufserfahrung</a></li>
+                <li><a href="#projects" class="nav-link">Projekte</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <span class="terminal-button close"></span>
+                    <span class="terminal-button minimize"></span>
+                    <span class="terminal-button maximize"></span>
+                </div>
+                <div class="terminal-body">
+                    <p class="terminal-line">
+                        <span class="prompt">matthias@portfolio:~$</span>
+                        <span class="command">whoami</span>
+                    </p>
+                    <p class="terminal-output typing-animation">Software Developer</p>
+                    <p class="terminal-line">
+                        <span class="prompt">matthias@portfolio:~$</span>
+                        <span class="command">cat skills.txt</span>
+                    </p>
+                    <p class="terminal-output typing-animation-delay">Software Development | AI Development | Leader</p>
+                    <p class="terminal-line">
+                        <span class="prompt">matthias@portfolio:~$</span>
+                        <span class="cursor">_</span>
+                    </p>
+                </div>
+            </div>
+            <h1 class="glitch" data-text="Matthias Dorner">Matthias Dorner</h1>
+            <p class="subtitle">Turning Ideas into Code</p>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="code-bracket">{</span>
+                über mich
+                <span class="code-bracket">}</span>
+            </h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="assets/Pic.jpg" alt="Matthias Dorner">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span>about.js</span>
+                        </div>
+                        <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+                            <span class="property">name</span>: <span class="string">"Matthias Dorner"</span>,
+                            <span class="property">role</span>: <span class="string">"Software Developer"</span>,
+                            <span class="property">passion</span>: [
+                                <span class="string">"Clean Code"</span>,
+                                <span class="string">"Problem Solving"</span>,
+                                <span class="string">"AI"</span>,
+                            ],
+                            <span class="property">currentFocus</span>: <span class="string">"Building scalable applications"</span>,
+                            <span class="property">funFact</span>: <span class="string">"Coffee-driven development"</span>
+                        };</code>
+                    </pre>
+                    </div>
+                    <p class="about-description">
+                        Leidenschaftlicher Software-Entwickler mit Fokus auf moderne Business-Anwendungen
+                        und Clean Code. Ich liebe es, komplexe Probleme in elegante Lösungen zu verwandeln
+                        und dabei stets die neuesten Technologien im Blick zu behalten.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="tech-stack">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="code-bracket">&lt;</span>
+                Tech Stack
+                <span class="code-bracket">/&gt;</span>
+            </h2>
+            <div class="tech-grid">
+                <div class="tech-card" data-category="frontend">
+                    <div class="tech-icon"><i class="fab fa-react"></i></div>
+                    <h3>React</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 25%"></div>
+                    </div>
+                </div>
+                <div class="tech-card" data-category="tools">
+                    <div class="tech-icon"><i class="fas fa-brain"></i></div>
+                    <h3>AI</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="tech-card" data-category="tools">
+                    <div class="tech-icon"><i class="devicon-c-plain"></i></div>
+                    <h3>C</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 30%"></div>
+                    </div>
+                </div>
+                <div class="tech-card" data-category="devops">
+                    <div class="tech-icon"><i class="devicon-cplusplus-plain"></i></div>
+                    <h3>C++</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 60%"></div>
+                    </div>
+                </div>
+                <div class="tech-card" data-category="cloud">
+                    <div class="tech-icon"><i class="devicon-csharp-plain"></i></div>
+                    <h3>C#</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 40%"></div>
+                    </div>
+                </div>
+                <div class="tech-card" data-category="backend">
+                    <div class="tech-icon"><i class="fab fa-node"></i></div>
+                    <h3>Node.js</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="tech-card" data-category="backend">
+                    <div class="tech-icon"><i class="fab fa-python"></i></div>
+                    <h3>Python</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="tech-card" data-category="tools">
+                    <div class="tech-icon"><i class="fab fa-html5"></i></div>
+                    <h3>HTML</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="tech-card" data-category="tools">
+                    <div class="tech-icon"><i class="fab fa-css3-alt"></i></div>
+                    <h3>CSS</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="tech-card" data-category="frontend">
+                    <div class="tech-icon"><i class="fab fa-js"></i></div>
+                    <h3>JavaScript</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="tech-card" data-category="database">
+                    <div class="tech-icon"><i class="fas fa-database"></i></div>
+                    <h3>SQL</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="tech-card" data-category="tools">
+                    <div class="tech-icon"><i class="fab fa-git-alt"></i></div>
+                    <h3>Git</h3>
+                    <div class="tech-bar">
+                        <div class="tech-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="code-bracket">/*</span>
+                Berufserfahrung
+                <span class="code-bracket">*/</span>
+            </h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>Founder</h3>
+                                <span class="experience-period">2025 - Heute</span>
+                            </div>
+                            <h4 class="company">ClubMatch</h4>
+                            <ul class="experience-list">
+                                <li>Entwicklung und Architektur von skalierbaren IOS & Android Anwendung</li>
+                                <li>Entwicklung verschiedenen Unternehmens Strategien</li>
+                                <li>Erlernen von neuen Technologien</li>
+                                <li>Management von einem Startup</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>React</span>
+                                <span>REST-API</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>Security Supervisor</h3>
+                                <span class="experience-period">2025 - Heute</span>
+                            </div>
+                            <h4 class="company">SRE Security & Services</h4>
+                            <ul class="experience-list">
+                                <li>Leitung von verschiedenen Teams bis zu 20 Personen</li>
+                                <li>Treffen von sicherheits abhängigen Schritte</li>
+                                <li>Management im Stress Situationen</li>
+                            </ul>
+                            <div class="tech-tags">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>Chief Executive Officer</h3>
+                                <span class="experience-period">2025 - 2025</span>
+                            </div>
+                            <h4 class="company">BravoDesk (Selbstständig)</h4>
+                            <ul class="experience-list">
+                                <li>Entwicklung von einem AI Support Discord Bot</li>
+                                <li>Entwicklung eigener API</li>
+                                <li>Performance-Optimierung und SEO</li>
+                                <li>Marketing & Business Development</li>
+                                <li>Buchführung nach Österreichischem Gesetz</li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>MySQL</span>
+                                <span>JavaScript</span>
+                                <span>REST-API</span>
+                                <span>NodeJS</span>
+                                <span>KI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>Lehrling </h3>
+                                <span class="experience-period">2022 - 2024</span>
+                            </div>
+                            <h4 class="company">KNAPP AG</h4>
+                            <ul class="experience-list">
+                                <li>Wartung von Projektrepositories</li>
+                                <li>Entwicklung in Python, C#, C++, Java, NodeJS usw.</li>
+                                <li>Projektdokumentation</li>
+                                <li>Erstellung, Aufbereitung und Abhalten von Projektpräsentationen</li>
+                                <li>Datenbankmanagement und -entwicklung (MySQL, Oracle)</li>
+                                <li>Grundlegende Konfiguration von Linux Systemen</li>
+                                <li>Erstellung und Durchführung von Softwaretests/li>
+                            </ul>
+                            <div class="tech-tags">
+                                <span>Java</span>
+                                <span>C++</span>
+                                <span>C#</span>
+                                <span>MySQL</span>
+                                <span>NodeJS</span>
+                                <span>REST-API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="code-bracket">[</span>
+                Projekte
+                <span class="code-bracket">]</span>
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/projects/clubmatch-logo.png" alt="ClubMatch Logo" class="project-logo">
+                        <div class="project-overlay">
+                            <a href="https://clubmatch.party/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ClubMatch</h3>
+                        <p>ClubMatch entwickelt eine Party-App, die Teenagern zwischen 16 und 30 Jahren hilft, Events zu entdecken. Aufgebaut wie TikTok und Tinder und das während Veranstalter kostenlos Reichweite und neue Gäste gewinnen..</p>
+                        <div class="project-tech">
+                            <span>React Native</span>
+                            <span>PostgreSQL</span>
+                            <span>Supabase</span>
+                            <span>Expo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/projects/bravodesk-logo.png" alt="BravoDesk Logo" class="project-logo">
+                        <div class="project-overlay">
+                            <a href="https://github.com/MatzeTV-dev/BravoDesk" class="project-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>BravoDesk</h3>
+                        <p>BravoDesk war ein KI-gesteuertes Ticketsystem, das speziell für Discord-Communities entwickelt wurde. Es ermöglichte Server-Besitzern und Moderatoren, den Nutzer-Support durch Integration einer kontextbewussten KI zu automatisieren.</p>
+                        <div class="project-tech">
+                            <span>OpenAI</span>
+                            <span>JavaScript</span>
+                            <span>REST-API</span>
+                            <span>AI</span>
+                            <span>NodeJS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/projects/taplock-logo.png" alt="TapLock Logo" class="project-logo">
+                        <div class="project-overlay">
+                            <a href="https://taplock.at/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>TapLock</h3>
+                        <p>TapLock ist ein physischer NFC-basierter Schlüssel, der hilft, sich von digitalen Ablenkungen zu befreien. Durch Scannen des Schlüssels mit dem Smartphone werden ausgewählte Apps wie Instagram, TikTok oder YouTube sofort gesperrt oder entsperrt.</p>
+                        <div class="project-tech">
+                            <span>Android Studios</span>
+                            <span>Java</span>
+                            <span>3D Printing</span>
+                            <span>3D Modeling</span>
+                            <span>NFC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <!--<img src="" alt="Adressverwaltung Logo" class="project-logo">-->
+                        <div class="project-overlay">
+                            <a href="https://github.com/MatzeTV-dev/Adressverwaltung" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/MatzeTV-dev/AdressverwaltungWEB" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Adressverwaltung</h3>
+                        <p>Eine webbasierte Adressverwaltungsanwendung, die es Benutzern ermöglicht, Adressen und andere Informationen über Personen zu speichern. Diese Anwendung wurde mit Python als Lern Programm entwickelt.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>QT Designer</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>&lt;/MD&gt;</h3>
+                    <p>Turning Ideas into Code</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p>Email: matthias.dorner07@pm.me</p>
+                    <p>Location: Österreich</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Social</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/MatzeTV-dev"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/matthias-dorner-70714629b/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/_matthias_l_/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Matthias Dorner. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
