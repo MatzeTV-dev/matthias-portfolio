@@ -19,8 +19,8 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#services" class="nav-link">Leistungen</a></li>
-                <li><a href="#about" class="nav-link">Über uns</a></li>
-                <li><a href="#gallery" class="nav-link">Galerie</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#gallery" class="nav-link">Portfolio</a></li>
                 <li><a href="#kontakt" class="nav-link">Termin</a></li>
             </ul>
             <div class="hamburger">
@@ -234,6 +234,90 @@
         </div>
     </section>
 
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>Unser Team</h2>
+                <p>Lernen Sie unsere Stylisten kennen</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sarah Martinez</h3>
+                        <p class="member-role">Salonleitung & Master Stylist</p>
+                        <p class="member-bio">15 Jahre Erfahrung. Spezialisiert auf Schnitt & Coloration. Leidenschaft für kreative Frisuren und Typberatung.</p>
+                        <div class="member-specialties">
+                            <span class="specialty-tag">Balayage</span>
+                            <span class="specialty-tag">Hochsteckfrisuren</span>
+                            <span class="specialty-tag">Beratung</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small" onclick="selectStylist('Sarah Martinez')">Bei Sarah buchen</button>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Michael Weber</h3>
+                        <p class="member-role">Senior Stylist</p>
+                        <p class="member-bio">10 Jahre Erfahrung. Experte für Herrenschnitte und Bartpflege. Moderne Looks mit klassischer Handwerkskunst.</p>
+                        <div class="member-specialties">
+                            <span class="specialty-tag">Herrenschnitte</span>
+                            <span class="specialty-tag">Bartpflege</span>
+                            <span class="specialty-tag">Fade Cuts</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small" onclick="selectStylist('Michael Weber')">Bei Michael buchen</button>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Lisa Hoffmann</h3>
+                        <p class="member-role">Color Specialist</p>
+                        <p class="member-bio">8 Jahre Erfahrung. Farbexpertin mit Auge fürs Detail. Von natürlich bis extravagant - alles ist möglich!</p>
+                        <div class="member-specialties">
+                            <span class="specialty-tag">Coloration</span>
+                            <span class="specialty-tag">Strähnen</span>
+                            <span class="specialty-tag">Ombré</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small" onclick="selectStylist('Lisa Hoffmann')">Bei Lisa buchen</button>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Anna Schneider</h3>
+                        <p class="member-role">Stylist & Hair Care Expert</p>
+                        <p class="member-bio">6 Jahre Erfahrung. Spezialistin für Haarpflege-Behandlungen. Berät Sie gerne zu Produkten und Pflegeroutinen.</p>
+                        <div class="member-specialties">
+                            <span class="specialty-tag">Pflegebehandlungen</span>
+                            <span class="specialty-tag">Keratinbehandlung</span>
+                            <span class="specialty-tag">Extensions</span>
+                        </div>
+                        <button class="btn btn-secondary btn-small" onclick="selectStylist('Anna Schneider')">Bei Anna buchen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -272,32 +356,138 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
+    <!-- Portfolio Section (Before/After) -->
+    <section id="gallery" class="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2>Impressionen</h2>
-                <p>Einblicke in unseren Salon</p>
+                <h2>Unser Portfolio</h2>
+                <p>Vorher & Nachher - Unsere Transformationen</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-cut"></i>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Balayage Transformation</h4>
+                        <p>Natürlicher Farbverlauf mit sonnigen Akzenten</p>
+                        <span class="stylist-credit">by Sarah Martinez</span>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-scissors"></i>
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Modern Fade Cut</h4>
+                        <p>Klassischer Herrenschnitt mit modernem Touch</p>
+                        <span class="stylist-credit">by Michael Weber</span>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-paint-brush"></i>
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Platinblonde Coloration</h4>
+                        <p>Von Dunkelbraun zu eisigem Platinblond</p>
+                        <span class="stylist-credit">by Lisa Hoffmann</span>
                     </div>
                 </div>
-                <div class="gallery-item">
-                    <div class="gallery-placeholder">
-                        <i class="fas fa-spa"></i>
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Bob mit Volumen</h4>
+                        <p>Gestuft geschnittener Bob für mehr Schwung</p>
+                        <span class="stylist-credit">by Sarah Martinez</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Keratinbehandlung</h4>
+                        <p>Glänzendes, geschmeidiges Haar nach Reparatur</p>
+                        <span class="stylist-credit">by Anna Schneider</span>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="before-after">
+                        <div class="before">
+                            <div class="ba-placeholder">
+                                <i class="fas fa-user"></i>
+                                <span class="ba-label">Vorher</span>
+                            </div>
+                        </div>
+                        <div class="after">
+                            <div class="ba-placeholder highlight">
+                                <i class="fas fa-star"></i>
+                                <span class="ba-label">Nachher</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Rote Akzente</h4>
+                        <p>Warme Rottöne für einen lebendigen Look</p>
+                        <span class="stylist-credit">by Lisa Hoffmann</span>
                     </div>
                 </div>
             </div>

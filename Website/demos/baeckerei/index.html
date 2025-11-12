@@ -19,8 +19,8 @@
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#produkte" class="nav-link">Produkte</a></li>
+                <li><a href="#catering" class="nav-link">Catering</a></li>
                 <li><a href="#about" class="nav-link">Über uns</a></li>
-                <li><a href="#gallery" class="nav-link">Galerie</a></li>
                 <li><a href="#kontakt" class="nav-link">Kontakt</a></li>
             </ul>
             <div class="hamburger">
@@ -44,6 +44,34 @@
         </div>
         <div class="scroll-down">
             <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Baking Times Widget -->
+    <section class="baking-times-widget">
+        <div class="container">
+            <div class="times-card">
+                <h2><i class="fas fa-fire"></i> Frisch aus dem Ofen</h2>
+                <p class="subtitle">Unsere heutigen Backzeiten</p>
+                <div class="times-grid">
+                    <div class="time-slot">
+                        <div class="time">07:00 Uhr</div>
+                        <div class="items">Semmeln, Brot, Croissants</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">10:30 Uhr</div>
+                        <div class="items">Vollkornbrot, Feingebäck</div>
+                    </div>
+                    <div class="time-slot">
+                        <div class="time">14:00 Uhr</div>
+                        <div class="items">Nachmittagsgebäck, Kuchen</div>
+                    </div>
+                </div>
+                <div class="fresh-badge">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Jetzt frisch verfügbar</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -81,6 +109,13 @@
             <div class="section-header">
                 <h2>Unser Sortiment</h2>
                 <p>Frisch aus dem Ofen für Sie</p>
+                <div class="allergen-legend">
+                    <span class="legend-title">Allergene:</span>
+                    <span class="allergen-icon" title="Enthält Gluten"><i class="fas fa-wheat-awn"></i> Gluten</span>
+                    <span class="allergen-icon" title="Enthält Milch"><i class="fas fa-droplet"></i> Milch</span>
+                    <span class="allergen-icon" title="Enthält Eier"><i class="fas fa-egg"></i> Eier</span>
+                    <span class="allergen-icon" title="Enthält Nüsse"><i class="fas fa-leaf"></i> Nüsse</span>
+                </div>
             </div>
             <div class="menu-tabs">
                 <button class="tab-btn active" data-tab="brot">Brot & Brötchen</button>
@@ -97,6 +132,9 @@
                             <span class="price">€4.20</span>
                         </div>
                         <p>Kräftiges Roggenmischbrot, 1kg</p>
+                        <div class="allergens">
+                            <i class="fas fa-wheat-awn" title="Enthält Gluten"></i>
+                        </div>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-header">
@@ -193,6 +231,11 @@
                             <span class="price">€1.80</span>
                         </div>
                         <p>Buttercroissant nach französischer Art</p>
+                        <div class="allergens">
+                            <i class="fas fa-wheat-awn" title="Enthält Gluten"></i>
+                            <i class="fas fa-droplet" title="Enthält Milch"></i>
+                            <i class="fas fa-egg" title="Enthält Eier"></i>
+                        </div>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-header">
@@ -207,6 +250,12 @@
                             <span class="price">€2.40</span>
                         </div>
                         <p>Mit Walnussfüllung</p>
+                        <div class="allergens">
+                            <i class="fas fa-wheat-awn" title="Enthält Gluten"></i>
+                            <i class="fas fa-droplet" title="Enthält Milch"></i>
+                            <i class="fas fa-egg" title="Enthält Eier"></i>
+                            <i class="fas fa-leaf" title="Enthält Nüsse"></i>
+                        </div>
                     </div>
                     <div class="menu-item">
                         <div class="menu-item-header">
@@ -228,6 +277,60 @@
                             <span class="price">€2.00</span>
                         </div>
                         <p>Mit Schokoladenstückchen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catering Section -->
+    <section id="catering" class="catering">
+        <div class="container">
+            <div class="section-header">
+                <h2>Catering & Partyservice</h2>
+                <p>Für Ihre Feierlichkeiten und Events</p>
+            </div>
+            <div class="catering-content">
+                <div class="catering-text">
+                    <h3>Lassen Sie sich verwöhnen</h3>
+                    <p>Ob Firmenfeier, Geburtstag, Hochzeit oder Taufe - mit unserem Catering-Service sorgen wir dafür, dass Ihre Gäste kulinarisch verwöhnt werden. Wir liefern frische Backwaren, belegte Brötchen, Kuchen und Torten direkt zu Ihrem Event.</p>
+
+                    <div class="catering-packages">
+                        <div class="package-card">
+                            <h4><i class="fas fa-briefcase"></i> Business-Paket</h4>
+                            <p>Perfekt für Meetings und Konferenzen</p>
+                            <ul>
+                                <li>Belegte Brötchen-Platte</li>
+                                <li>Croissants & Gebäck</li>
+                                <li>Kaffeekuchen</li>
+                            </ul>
+                            <span class="package-price">ab €8,50 pro Person</span>
+                        </div>
+                        <div class="package-card">
+                            <h4><i class="fas fa-birthday-cake"></i> Party-Paket</h4>
+                            <p>Für private Feiern und Events</p>
+                            <ul>
+                                <li>Snack-Platte mit Gebäck</li>
+                                <li>Torten nach Wahl</li>
+                                <li>Fingerfood-Auswahl</li>
+                            </ul>
+                            <span class="package-price">ab €12,00 pro Person</span>
+                        </div>
+                        <div class="package-card">
+                            <h4><i class="fas fa-utensils"></i> Brunch-Paket</h4>
+                            <p>Für Sonntagsbrunch und Frühstück</p>
+                            <ul>
+                                <li>Diverse Brotsorten</li>
+                                <li>Süße & herzhafte Brötchen</li>
+                                <li>Kuchen & Gebäck</li>
+                            </ul>
+                            <span class="package-price">ab €15,00 pro Person</span>
+                        </div>
+                    </div>
+
+                    <div class="catering-cta">
+                        <p><strong>Mindestbestellmenge:</strong> 10 Personen | <strong>Vorlaufzeit:</strong> 48 Stunden</p>
+                        <a href="#kontakt" class="btn btn-primary">Catering anfragen</a>
                     </div>
                 </div>
             </div>

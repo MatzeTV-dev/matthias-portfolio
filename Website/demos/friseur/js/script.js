@@ -62,3 +62,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Stylist selection function
+function selectStylist(stylistName) {
+    // Scroll to contact form
+    const contactSection = document.getElementById('kontakt');
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+
+    // Pre-fill stylist name in message
+    setTimeout(() => {
+        const messageField = document.getElementById('message');
+        if (messageField) {
+            messageField.value = `Ich möchte gerne einen Termin bei ${stylistName} buchen.`;
+            messageField.focus();
+        }
+    }, 800);
+}

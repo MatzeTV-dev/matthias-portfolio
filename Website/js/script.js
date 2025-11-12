@@ -119,27 +119,6 @@ document.querySelectorAll('.timeline-item').forEach((item, index) => {
     observer.observe(item);
 });
 
-// ===== Tech Stack Filter (Optional Enhancement) =====
-const techCards = document.querySelectorAll('.tech-card');
-
-techCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        const category = this.dataset.category;
-
-        techCards.forEach(otherCard => {
-            if (otherCard.dataset.category !== category && otherCard !== this) {
-                otherCard.style.opacity = '0.3';
-            }
-        });
-    });
-
-    card.addEventListener('mouseleave', function() {
-        techCards.forEach(otherCard => {
-            otherCard.style.opacity = '1';
-        });
-    });
-});
-
 // ===== Particle Background Effect =====
 function createParticles() {
     const hero = document.querySelector('.hero');
