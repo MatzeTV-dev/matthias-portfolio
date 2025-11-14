@@ -122,6 +122,8 @@ document.querySelectorAll('.timeline-item').forEach((item, index) => {
 // ===== Particle Background Effect =====
 function createParticles() {
     const hero = document.querySelector('.hero');
+    if (!hero) return; // Guard clause - exit if hero section doesn't exist
+
     const particleCount = 50;
 
     for (let i = 0; i < particleCount; i++) {

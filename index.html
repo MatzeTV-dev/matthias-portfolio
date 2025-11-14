@@ -5,11 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Matthias Dorner - Software Developer mit Fokus auf moderne Business-Anwendungen, AI-Entwicklung und Clean Code. Portfolio mit Projekten und Berufserfahrung.">
     <title>Matthias Dorner - Software Developer & AI Entwickler</title>
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="assets/Pic.webp" as="image" type="image/webp">
+
+    <!-- Critical CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Non-critical CSS - load asynchronously -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"></noscript>
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
     <!-- SEO H1 - visually hidden but accessible to search engines and screen readers -->
     <h1 class="sr-only">Matthias Dorner - Software Developer & AI Entwickler Portfolio</h1>
 
@@ -67,6 +84,8 @@
         </div>
     </section>-->
 
+    <!-- Main Content -->
+    <main id="main-content">
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -78,7 +97,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <div class="image-frame">
-                        <img src="assets/Pic.webp" alt="Matthias Dorner - Professionelles Profilbild des Software Developers">
+                        <img src="assets/Pic.webp" alt="Matthias Dorner - Professionelles Profilbild des Software Developers" width="400" height="400" fetchpriority="high">
                         <div class="image-overlay"></div>
                     </div>
                 </div>
@@ -332,9 +351,9 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/projects/clubmatch-logo.webp" alt="ClubMatch - Party-App Logo für Event-Discovery mit React Native" class="project-logo">
+                        <img src="assets/projects/clubmatch-logo.webp" alt="ClubMatch - Party-App Logo für Event-Discovery mit React Native" class="project-logo" width="300" height="300" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://clubmatch.party/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://clubmatch.party/" class="project-link" aria-label="ClubMatch Website besuchen" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -351,9 +370,9 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/projects/bravodesk-logo.webp" alt="BravoDesk - KI-gesteuertes Discord Ticketsystem Logo mit OpenAI Integration" class="project-logo">
+                        <img src="assets/projects/bravodesk-logo.webp" alt="BravoDesk - KI-gesteuertes Discord Ticketsystem Logo mit OpenAI Integration" class="project-logo" width="300" height="300" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/MatzeTV-dev/BravoDesk" class="project-link"><i class="fab fa-github"></i></a>
+                            <a href="https://github.com/MatzeTV-dev/BravoDesk" class="project-link" aria-label="BravoDesk auf GitHub ansehen" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -371,9 +390,9 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/projects/taplock-logo.webp" alt="TapLock - NFC-basierter Schlüssel zum Sperren von Apps, entwickelt mit Android Studio" class="project-logo">
+                        <img src="assets/projects/taplock-logo.webp" alt="TapLock - NFC-basierter Schlüssel zum Sperren von Apps, entwickelt mit Android Studio" class="project-logo" width="300" height="300" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://taplock.at/" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://taplock.at/" class="project-link" aria-label="TapLock Website besuchen" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -393,8 +412,8 @@
                     <div class="project-image">
                         <!--<img src="" alt="Adressverwaltung Logo" class="project-logo">-->
                         <div class="project-overlay">
-                            <a href="https://github.com/MatzeTV-dev/Adressverwaltung" class="project-link"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="https://github.com/MatzeTV-dev/AdressverwaltungWEB" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/MatzeTV-dev/Adressverwaltung" class="project-link" aria-label="Adressverwaltung Desktop auf GitHub ansehen" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/MatzeTV-dev/AdressverwaltungWEB" class="project-link" aria-label="Adressverwaltung Web auf GitHub ansehen" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
@@ -427,7 +446,7 @@
                 <!-- Handwerksbetrieb -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/handwerk-thumb.webp" alt="Schreinerei Mustermann - Demo-Website für Handwerksbetriebe mit Kontaktformular und Google Maps">
+                        <img src="demos/screenshots/handwerk-thumb.webp" alt="Schreinerei Mustermann - Demo-Website für Handwerksbetriebe mit Kontaktformular und Google Maps" width="600" height="400" loading="lazy">
                         <div class="showcase-overlay">
                             <a href="demos/handwerk/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -450,7 +469,7 @@
                 <!-- Café/Bar -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/cafe-thumb.webp" alt="Café Gemütlich - Demo-Website für Cafés und Bars mit Menü-Präsentation und Buchung">
+                        <img src="demos/screenshots/cafe-thumb.webp" alt="Café Gemütlich - Demo-Website für Cafés und Bars mit Menü-Präsentation und Buchung" width="600" height="400" loading="lazy">
                         <div class="showcase-overlay">
                             <a href="demos/cafe/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -473,7 +492,7 @@
                 <!-- Restaurant -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/restaurant-thumb.webp" alt="Restaurant Bella Vista - Demo-Website für italienische Restaurants mit Speisekarte und Reservierung">
+                        <img src="demos/screenshots/restaurant-thumb.webp" alt="Restaurant Bella Vista - Demo-Website für italienische Restaurants mit Speisekarte und Reservierung" width="600" height="400" loading="lazy">
                         <div class="showcase-overlay">
                             <a href="demos/restaurant/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -496,7 +515,7 @@
                 <!-- Friseur -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/friseur-thumb.webp" alt="Salon Styles - Demo-Website für Friseursalons mit Service-Übersicht und Terminbuchung">
+                        <img src="demos/screenshots/friseur-thumb.webp" alt="Salon Styles - Demo-Website für Friseursalons mit Service-Übersicht und Terminbuchung" width="600" height="400" loading="lazy">
                         <div class="showcase-overlay">
                             <a href="demos/friseur/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -519,7 +538,7 @@
                 <!-- Bäckerei -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/baeckerei-thumb.webp" alt="Bäckerei Frischbrot - Demo-Website für Handwerksbäckereien mit Produktübersicht und Angeboten">
+                        <img src="demos/screenshots/baeckerei-thumb.webp" alt="Bäckerei Frischbrot - Demo-Website für Handwerksbäckereien mit Produktübersicht und Angeboten" width="600" height="400" loading="lazy">
                         <div class="showcase-overlay">
                             <a href="demos/baeckerei/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -542,7 +561,7 @@
                 <!-- Autohaus -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/autohaus-thumb.webp" alt="Autohaus Müller - Demo-Website für Autohäuser mit Fahrzeugpräsentation und Werkstatt-Service">
+                        <img src="demos/screenshots/autohaus-thumb.webp" alt="Autohaus Müller - Demo-Website für Autohäuser mit Fahrzeugpräsentation und Werkstatt-Service" width="600" height="400" loading="lazy">
                         <div class="showcase-overlay">
                             <a href="demos/autohaus/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -566,12 +585,13 @@
             <div class="showcase-cta">
                 <h3>Interessiert an einer professionellen Website für dein Unternehmen?</h3>
                 <p>Kontaktiere mich für ein unverbindliches Beratungsgespräch!</p>
-                <a href="https://n8n.srv1028372.hstgr.cloud/form/contact" class="cta-button" target="_blank">
+                <a href="https://n8n.srv1028372.hstgr.cloud/form/contact" class="cta-button" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-envelope"></i> Jetzt Kontakt aufnehmen
                 </a>
             </div>
         </div>
     </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -589,9 +609,9 @@
                 <div class="footer-section">
                     <h4>Social</h4>
                     <div class="social-links">
-                        <a href="https://github.com/MatzeTV-dev"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/matthias-dorner-70714629b/"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/_matthias_l_/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/MatzeTV-dev" aria-label="GitHub Profil besuchen" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/matthias-dorner-70714629b/" aria-label="LinkedIn Profil besuchen" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/_matthias_l_/" aria-label="Instagram Profil besuchen" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -601,6 +621,6 @@
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
