@@ -95,6 +95,18 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// Fallback: Make all elements visible after 2 seconds if they're still hidden
+// This ensures content is visible even if IntersectionObserver doesn't work properly (e.g., with file:// protocol)
+setTimeout(() => {
+    const hiddenElements = document.querySelectorAll('.tech-card, .project-card, .showcase-card, .timeline-item');
+    hiddenElements.forEach(element => {
+        if (parseFloat(getComputedStyle(element).opacity) < 0.5) {
+            element.style.opacity = '1';
+            element.style.transform = 'translateY(0)';
+        }
+    });
+}, 2000);
+
 // Observe all tech cards
 document.querySelectorAll('.tech-card').forEach((card, index) => {
     card.style.opacity = '0';
@@ -105,6 +117,14 @@ document.querySelectorAll('.tech-card').forEach((card, index) => {
 
 // Observe all project cards
 document.querySelectorAll('.project-card').forEach((card, index) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(50px)';
+    card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+    observer.observe(card);
+});
+
+// Observe all showcase cards
+document.querySelectorAll('.showcase-card').forEach((card, index) => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(50px)';
     card.style.transition = `all 0.6s ease ${index * 0.1}s`;
@@ -182,10 +202,12 @@ window.addEventListener('load', () => {
 });
 
 // ===== Mouse Trail Effect =====
+// Use matchMedia instead of window.innerWidth to avoid forced reflow
+const isDesktop = window.matchMedia('(min-width: 769px)');
 const coords = { x: 0, y: 0 };
 const circles = document.querySelectorAll('.circle');
 
-if (window.innerWidth > 768) {
+if (isDesktop.matches) {
     circles.forEach((circle) => {
         circle.x = 0;
         circle.y = 0;
@@ -257,11 +279,20 @@ const techProgressBars = document.querySelectorAll('.tech-progress');
 const progressObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            const width = entry.target.style.width;
-            entry.target.style.width = '0';
-            setTimeout(() => {
-                entry.target.style.width = width;
-            }, 100);
+            // Use data attribute to store target width and avoid reading style.width (forced reflow)
+            const targetWidth = entry.target.getAttribute('data-width') || entry.target.style.width;
+            if (!entry.target.hasAttribute('data-width')) {
+                entry.target.setAttribute('data-width', targetWidth);
+            }
+
+            // Batch DOM writes to avoid layout thrashing
+            requestAnimationFrame(() => {
+                entry.target.style.width = '0';
+                requestAnimationFrame(() => {
+                    entry.target.style.width = targetWidth;
+                });
+            });
+
             progressObserver.unobserve(entry.target);
         }
     });
@@ -273,7 +304,9 @@ techProgressBars.forEach(bar => {
 
 // ===== Add Cursor Glow Effect =====
 function createCursorGlow() {
-    if (window.innerWidth <= 768) return;
+    // Use matchMedia to avoid forced reflow
+    const isDesktopGlow = window.matchMedia('(min-width: 769px)');
+    if (!isDesktopGlow.matches) return;
 
     const glow = document.createElement('div');
     glow.style.cssText = `

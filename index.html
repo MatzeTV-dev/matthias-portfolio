@@ -7,21 +7,88 @@
     <title>Matthias Dorner - Software Developer & AI Entwickler</title>
 
     <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
     <!-- Preload critical assets -->
     <link rel="preload" href="assets/Pic.webp" as="image" type="image/webp">
 
-    <!-- Critical CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Preload fonts for better performance -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Non-critical CSS - load asynchronously -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <!-- Critical CSS - Inlined for faster initial render -->
+    <style>
+        /* Reset & Base */
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--primary-color:#00ff88;--secondary-color:#0099ff;--accent-color:#ff0080;--bg-dark:#0a0e27;--bg-darker:#050810;--bg-card:#141b33;--text-primary:#e4f0fb;--text-secondary:#8892b0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--bg-darker);color:var(--text-primary);line-height:1.6;overflow-x:hidden}
+        body.menu-open{overflow:hidden}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px}
+        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
+        .skip-link{position:absolute;top:-40px;left:0;background:var(--primary-color);color:var(--bg-dark);padding:8px 16px;text-decoration:none;font-weight:bold;z-index:10000;border-radius:0 0 4px 0}
+        .skip-link:focus{top:0}
+        /* Navigation */
+        .navbar{position:fixed;top:0;width:100%;background:rgba(10,14,39,0.95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;border-bottom:1px solid rgba(0,255,136,0.1);transition:all 0.3s ease}
+        .navbar.scrolled{box-shadow:0 5px 30px rgba(0,255,136,0.1)}
+        .nav-container{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:1.5rem;font-weight:bold;color:var(--primary-color);font-family:monospace}
+        .nav-menu{display:flex;list-style:none;gap:2rem}
+        .nav-link{color:var(--text-primary);text-decoration:none;transition:color 0.3s ease;position:relative;padding:0.5rem 0}
+        .nav-link:hover,.nav-link:focus{color:var(--primary-color)}
+        .hamburger{display:none;flex-direction:column;cursor:pointer;gap:5px;z-index:1001}
+        .hamburger span{width:25px;height:3px;background:var(--primary-color);border-radius:3px;transition:all 0.3s ease}
+        /* About Section - Above the fold */
+        section{padding:5rem 0}
+        .section-title{text-align:center;font-size:2.5rem;margin-bottom:3rem;position:relative}
+        .code-bracket{color:var(--primary-color);font-family:monospace;font-weight:bold}
+        .about{padding-top:7rem}
+        .about-content{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+        .about-image{position:relative}
+        .image-frame{position:relative;width:100%;max-width:400px;margin:0 auto}
+        .image-frame img{width:100%;height:auto;border-radius:10px;position:relative;z-index:1}
+    </style>
 
+    <!-- Non-critical CSS - Deferred loading -->
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+
+    <link rel="preload" href="css/custom-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/custom-icons.css"></noscript>
+
+    <!-- Devicon for C, C++, C# icons only -->
     <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"></noscript>
+
+    <!-- Font Display Optimization -->
+    <style>
+        /* Ensure text is visible during font loading - override CDN defaults */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'devicon';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.woff2') format('woff2'),
+                 url('https://cdn.jsdelivr.net/gh/devicons/devicon@latest/fonts/devicon.ttf') format('truetype');
+        }
+    </style>
+
 </head>
 <body>
     <!-- Skip to main content link for accessibility -->
@@ -351,7 +418,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/projects/clubmatch-logo.webp" alt="ClubMatch - Party-App Logo für Event-Discovery mit React Native" class="project-logo" width="300" height="300" loading="lazy">
+                        <img src="assets/projects/clubmatch-logo.webp" alt="ClubMatch - Party-App Logo für Event-Discovery mit React Native" class="project-logo" width="300" height="300">
                         <div class="project-overlay">
                             <a href="https://clubmatch.party/" class="project-link" aria-label="ClubMatch Website besuchen" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
                         </div>
@@ -370,7 +437,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/projects/bravodesk-logo.webp" alt="BravoDesk - KI-gesteuertes Discord Ticketsystem Logo mit OpenAI Integration" class="project-logo" width="300" height="300" loading="lazy">
+                        <img src="assets/projects/bravodesk-logo.webp" alt="BravoDesk - KI-gesteuertes Discord Ticketsystem Logo mit OpenAI Integration" class="project-logo" width="300" height="300">
                         <div class="project-overlay">
                             <a href="https://github.com/MatzeTV-dev/BravoDesk" class="project-link" aria-label="BravoDesk auf GitHub ansehen" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                         </div>
@@ -390,7 +457,7 @@
 
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/projects/taplock-logo.webp" alt="TapLock - NFC-basierter Schlüssel zum Sperren von Apps, entwickelt mit Android Studio" class="project-logo" width="300" height="300" loading="lazy">
+                        <img src="assets/projects/taplock-logo.webp" alt="TapLock - NFC-basierter Schlüssel zum Sperren von Apps, entwickelt mit Android Studio" class="project-logo" width="300" height="300">
                         <div class="project-overlay">
                             <a href="https://taplock.at/" class="project-link" aria-label="TapLock Website besuchen" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
                         </div>
@@ -404,25 +471,6 @@
                             <span>3D Printing</span>
                             <span>3D Modeling</span>
                             <span>NFC</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <!--<img src="" alt="Adressverwaltung Logo" class="project-logo">-->
-                        <div class="project-overlay">
-                            <a href="https://github.com/MatzeTV-dev/Adressverwaltung" class="project-link" aria-label="Adressverwaltung Desktop auf GitHub ansehen" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                            <a href="https://github.com/MatzeTV-dev/AdressverwaltungWEB" class="project-link" aria-label="Adressverwaltung Web auf GitHub ansehen" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Adressverwaltung</h3>
-                        <p>Eine webbasierte Adressverwaltungsanwendung, die es Benutzern ermöglicht, Adressen und andere Informationen über Personen zu speichern. Diese Anwendung wurde mit Python als Lern Programm entwickelt.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>QT Designer</span>
-                            <span>MySQL</span>
                         </div>
                     </div>
                 </div>
@@ -446,7 +494,7 @@
                 <!-- Handwerksbetrieb -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/handwerk-thumb.webp" alt="Schreinerei Mustermann - Demo-Website für Handwerksbetriebe mit Kontaktformular und Google Maps" width="600" height="400" loading="lazy">
+                        <img src="demos/screenshots/handwerk-thumb.webp" alt="Schreinerei Mustermann - Demo-Website für Handwerksbetriebe mit Kontaktformular und Google Maps" width="600" height="400">
                         <div class="showcase-overlay">
                             <a href="demos/handwerk/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -469,7 +517,7 @@
                 <!-- Café/Bar -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/cafe-thumb.webp" alt="Café Gemütlich - Demo-Website für Cafés und Bars mit Menü-Präsentation und Buchung" width="600" height="400" loading="lazy">
+                        <img src="demos/screenshots/cafe-thumb.webp" alt="Café Gemütlich - Demo-Website für Cafés und Bars mit Menü-Präsentation und Buchung" width="600" height="400">
                         <div class="showcase-overlay">
                             <a href="demos/cafe/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -492,7 +540,7 @@
                 <!-- Restaurant -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/restaurant-thumb.webp" alt="Restaurant Bella Vista - Demo-Website für italienische Restaurants mit Speisekarte und Reservierung" width="600" height="400" loading="lazy">
+                        <img src="demos/screenshots/restaurant-thumb.webp" alt="Restaurant Bella Vista - Demo-Website für italienische Restaurants mit Speisekarte und Reservierung" width="600" height="400">
                         <div class="showcase-overlay">
                             <a href="demos/restaurant/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -515,7 +563,7 @@
                 <!-- Friseur -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/friseur-thumb.webp" alt="Salon Styles - Demo-Website für Friseursalons mit Service-Übersicht und Terminbuchung" width="600" height="400" loading="lazy">
+                        <img src="demos/screenshots/friseur-thumb.webp" alt="Salon Styles - Demo-Website für Friseursalons mit Service-Übersicht und Terminbuchung" width="600" height="400">
                         <div class="showcase-overlay">
                             <a href="demos/friseur/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -538,7 +586,7 @@
                 <!-- Bäckerei -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/baeckerei-thumb.webp" alt="Bäckerei Frischbrot - Demo-Website für Handwerksbäckereien mit Produktübersicht und Angeboten" width="600" height="400" loading="lazy">
+                        <img src="demos/screenshots/baeckerei-thumb.webp" alt="Bäckerei Frischbrot - Demo-Website für Handwerksbäckereien mit Produktübersicht und Angeboten" width="600" height="400">
                         <div class="showcase-overlay">
                             <a href="demos/baeckerei/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -561,7 +609,7 @@
                 <!-- Autohaus -->
                 <div class="showcase-card">
                     <div class="showcase-image">
-                        <img src="demos/screenshots/autohaus-thumb.webp" alt="Autohaus Müller - Demo-Website für Autohäuser mit Fahrzeugpräsentation und Werkstatt-Service" width="600" height="400" loading="lazy">
+                        <img src="demos/screenshots/autohaus-thumb.webp" alt="Autohaus Müller - Demo-Website für Autohäuser mit Fahrzeugpräsentation und Werkstatt-Service" width="600" height="400">
                         <div class="showcase-overlay">
                             <a href="demos/autohaus/index.html" target="_blank" class="showcase-btn">
                                 <i class="fas fa-external-link-alt"></i> Live Demo
@@ -603,7 +651,7 @@
                 </div>
                 <div class="footer-section">
                     <h4>Kontakt</h4>
-                    <p>Email: matthias.dorner07@pm.me</p>
+                    <p>Email: matthias@dornerlabs.com</p>
                     <p>Location: Österreich</p>
                 </div>
                 <div class="footer-section">
