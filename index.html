@@ -32,8 +32,6 @@
         body.menu-open{overflow:hidden}
         .container{max-width:1200px;margin:0 auto;padding:0 20px}
         .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}
-        .skip-link{position:absolute;top:-40px;left:0;background:var(--primary-color);color:var(--bg-dark);padding:8px 16px;text-decoration:none;font-weight:bold;z-index:10000;border-radius:0 0 4px 0}
-        .skip-link:focus{top:0}
         /* Navigation */
         .navbar{position:fixed;top:0;width:100%;background:rgba(10,14,39,0.95);backdrop-filter:blur(10px);z-index:1000;padding:1rem 0;border-bottom:1px solid rgba(0,255,136,0.1);transition:all 0.3s ease}
         .navbar.scrolled{box-shadow:0 5px 30px rgba(0,255,136,0.1)}
@@ -95,9 +93,6 @@
 
 </head>
 <body>
-    <!-- Skip to main content link for accessibility -->
-    <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
-
     <!-- SEO H1 - visually hidden but accessible to search engines and screen readers -->
     <h1 class="sr-only">Matthias Dorner - Software Developer & AI Entwickler Portfolio</h1>
 
@@ -157,6 +152,9 @@
 
     <!-- Main Content -->
     <main id="main-content">
+    <!-- Home anchor for navigation -->
+    <span id="home" style="position: absolute; top: 0;"></span>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
