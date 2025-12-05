@@ -260,6 +260,24 @@ The `kunden-demos/` directory contains demo websites created for potential clien
    - Include all menu items, services, products, etc.
    - Keep the same page structure (home, about, services, contact, etc.)
 
+4. **Branding & Credits**
+   - Add client's logo to navigation (if available)
+   - Include "Developed by DornerLabs" credit in footer
+   - Link to https://dornerlabs.com with `rel="noopener noreferrer"`
+   - Style credit link with hover effects
+
+5. **Contact Forms**
+   - Use simple mailto: links for contact forms
+   - Format email with all form fields using `\r\n\r\n` for proper line breaks
+   - Include datenschutz checkbox linking to privacy policy
+   - No backend/server required - works everywhere
+
+6. **Password Protection (Optional)**
+   - Create `login.html` for demo access
+   - Use sessionStorage for authentication
+   - Add passwort check script to all protected pages
+   - Document password in separate `PASSWORT.md` file
+
 ### Creating a New Client Demo
 
 When creating a new client demo website, follow these steps:
@@ -288,11 +306,26 @@ When creating a new client demo website, follow these steps:
    - Link both pages prominently in footer
    - Add datenschutz link to contact form (with required checkbox)
 
-5. **Test the demo:**
-   - Check all links work
+5. **Branding & Forms:**
+   - Add logo to navigation on all pages (use `assets/logo.jpg`)
+   - Implement mailto: contact form with proper formatting
+   - Add "Developed by DornerLabs" credit in footer
+   - Make phone and email links clickable (tel: and mailto:)
+
+6. **Password Protection:**
+   - Create `login.html` with password form
+   - Add authentication check to all pages (in `<head>`)
+   - Set password in login.html (const CORRECT_PASSWORD)
+   - Create `PASSWORT.md` documentation
+
+7. **Test the demo:**
+   - Check all links work (including logo, DornerLabs credit)
+   - Test password protection (login/logout)
    - Verify mobile responsiveness
+   - Test contact form (opens email client correctly)
    - Ensure legal pages are accessible
    - Confirm all original content is present
+   - Check images load correctly
 
 ### Legal Compliance Notes
 
@@ -315,15 +348,23 @@ Location: `kunden-demos/cafe-koenig/`
 - Complete Impressum with all legal requirements
 - Comprehensive DSGVO-compliant Datenschutzerklärung
 - Mobile-friendly navigation
-- Contact form with privacy policy checkbox
+- Contact form with mailto: integration (all form data goes to email client)
+- Password protection system (login.html) - Default password: `koenig25`
+- Logo integration in navigation on all pages
 - Smooth animations and modern UX
+- "Developed by DornerLabs" credit in footer with link to dornerlabs.com
 
 **Files:**
 - `index.html` - Main page with all sections
 - `impressum.html` - Complete legal notice (ECG, UGB, GewO compliant)
 - `datenschutz.html` - Full DSGVO-compliant privacy policy
+- `login.html` - Password protection page
 - `css/style.css` - Modern styling
-- `js/script.js` - Interactive features
+- `js/script.js` - Interactive features (mailto form, logout, animations)
+- `assets/logo.jpg` - Cafe König logo
+- `assets/welcome_image.jpg` - Hero section image
+- `BILDER-ANLEITUNG.md` - Image placement guide
+- `PASSWORT.md` - Password system documentation
 
 ### Demo Sites
 Each demo in `demos/` is a standalone website with:
