@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Impressum - Cafe König, Graz">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Impressum - Cafe König</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Passwortschutz
+        if (sessionStorage.getItem('cafeKoenigAuth') !== 'authenticated') {
+            window.location.href = 'login.html';
+        }
+    </script>
+    <style>
+        .impressum-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .impressum-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+        }
+
+        .impressum-content h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .impressum-content h3 {
+            color: var(--accent-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .impressum-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        .impressum-content a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .impressum-content a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            padding: 12px 30px;
+            background: var(--primary-color);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background 0.3s;
+        }
+
+        .back-link:hover {
+            background: var(--accent-color);
+            text-decoration: none;
+        }
+
+        .info-box {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border-left: 5px solid var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.jpg" alt="Cafe König Logo" class="logo-img">
+                Cafe König
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#geschichte">Geschichte</a></li>
+                <li><a href="index.html#kaffee-abc">Kaffee ABC</a></li>
+                <li><a href="index.html#gutscheine">Gutscheine</a></li>
+                <li><a href="index.html#galerie">Fotogalerie</a></li>
+                <li><a href="index.html#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="impressum-content">
+        <h1>Impressum</h1>
+
+        <p><em>Informationspflicht gemäß § 5 E-Commerce-Gesetz (ECG), § 14 Unternehmensgesetzbuch (UGB), § 63 Gewerbeordnung (GewO) und Offenlegungspflicht gemäß § 25 Mediengesetz (MedienG)</em></p>
+
+        <div class="info-box">
+            <h2>Cafe König</h2>
+            <p><strong>Inhaberin:</strong> Waltraud Merkl</p>
+            <p><strong>Adresse:</strong> Sackstraße 14, 8010 Graz, Österreich</p>
+            <p><strong>Telefon:</strong> +43 (0)316 830326</p>
+            <p><strong>E-Mail:</strong> <a href="mailto:willkommen@cafe-koenig.at">willkommen@cafe-koenig.at</a></p>
+        </div>
+
+        <h2>Unternehmensgegenstand</h2>
+        <p>Cafe und Konditorei</p>
+
+        <h2>Berufsrecht</h2>
+        <p>Gewerbeordnung: <a href="https://www.ris.bka.gv.at" target="_blank" rel="noopener">www.ris.bka.gv.at</a></p>
+        <p>Bezirkshauptmannschaft: Magistrat Graz</p>
+
+        <h2>Aufsichtsbehörde/Gewerbebehörde</h2>
+        <p>Magistrat Graz<br>
+        Hauptplatz 1, 8011 Graz<br>
+        Telefon: +43 316 872-0<br>
+        Website: <a href="https://www.graz.at" target="_blank" rel="noopener">www.graz.at</a></p>
+
+        <h2>Mitgliedschaften</h2>
+        <p>Wirtschaftskammer Österreich: <a href="https://www.wko.at" target="_blank" rel="noopener">www.wko.at</a><br>
+        Wirtschaftskammer Steiermark: <a href="https://www.wko.at/stmk" target="_blank" rel="noopener">www.wko.at/stmk</a></p>
+
+        <h2>Berufsbezeichnung</h2>
+        <p>Gastgewerbe, verliehen in Österreich</p>
+
+        <h2>Verbraucher­streit­beilegung/Universal­schlichtungs­stelle</h2>
+        <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+        <h2>Haftung für Inhalte dieser Website</h2>
+        <p>Wir entwickeln die Inhalte dieser Website ständig weiter und bemühen uns korrekte und aktuelle Informationen bereitzustellen. Leider können wir keine Haftung für die Korrektheit aller Inhalte auf dieser Website übernehmen, speziell für jene, die seitens Dritter bereitgestellt wurden. Als Diensteanbieter sind wir nicht verpflichtet, die von Ihnen übermittelten oder gespeicherten Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+
+        <p>Unsere Verpflichtungen zur Entfernung von Informationen oder zur Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen aufgrund von gerichtlichen oder behördlichen Anordnungen bleiben auch im Falle unserer Nichtverantwortlichkeit davon unberührt.</p>
+
+        <p>Sollten Ihnen problematische oder rechtswidrige Inhalte auffallen, bitte wir Sie uns umgehend zu kontaktieren, damit wir die rechtswidrigen Inhalte entfernen können. Sie finden die Kontaktdaten im Impressum.</p>
+
+        <h2>Haftung für Links auf dieser Website</h2>
+        <p>Unsere Website enthält Links zu anderen Websites für deren Inhalt wir nicht verantwortlich sind. Haftung für verlinkte Websites besteht für uns nicht, da wir keine Kenntnis rechtswidriger Tätigkeiten hatten und haben, uns solche Rechtswidrigkeiten auch bisher nicht aufgefallen sind und wir Links sofort entfernen würden, wenn uns Rechtswidrigkeiten bekannt werden.</p>
+
+        <p>Wenn Ihnen rechtswidrige Links auf unserer Website auffallen, bitte wir Sie uns zu kontaktieren. Sie finden die Kontaktdaten im Impressum.</p>
+
+        <h2>Urheberrechtshinweis</h2>
+        <p>Alle Inhalte dieser Website (Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht. Falls notwendig, werden wir die unerlaubte Nutzung von Teilen der Inhalte unserer Seite rechtlich verfolgen.</p>
+
+        <p>Sollten Sie auf dieser Website Inhalte finden, die das Urheberrecht verletzen, bitten wir Sie uns zu kontaktieren.</p>
+
+        <h2>Bildernachweis</h2>
+        <p>Die Bilder, Fotos und Grafiken auf dieser Website sind urheberrechtlich geschützt.</p>
+
+        <h2>Konzeption, Design und technische Umsetzung</h2>
+        <p><strong>Webdesign & Entwicklung:</strong><br>
+        Matthias Dorner<br>
+        E-Mail: <a href="mailto:info@matthiasdorner.com">info@matthiasdorner.com</a><br>
+        Website: <a href="https://matthiasdorner.com" target="_blank" rel="noopener">www.matthiasdorner.com</a></p>
+
+        <h2>EU-Streitschlichtung</h2>
+        <p>Gemäß Verordnung über Online-Streitbeilegung in Verbraucherangelegenheiten (ODR-Verordnung) möchten wir Sie über die Online-Streitbeilegungsplattform (OS-Plattform) informieren.<br>
+        Verbraucher haben die Möglichkeit, Beschwerden an die Online Streitbeilegungsplattform der Europäischen Kommission unter <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a> zu richten. Die dafür notwendigen Kontaktdaten finden Sie oberhalb in unserem Impressum.</p>
+
+        <p>Wir möchten Sie jedoch darauf hinweisen, dass wir nicht bereit oder verpflichtet sind, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+        <h2>Haftung für Inhalte dieser Website</h2>
+        <p>Wir entwickeln die Inhalte dieser Website ständig weiter und bemühen uns korrekte und aktuelle Informationen bereitzustellen. Laut Telemediengesetz (TMG) §7 (1) sind wir als Diensteanbieter für eigene Informationen, die wir zur Nutzung bereitstellen, nach den allgemeinen Gesetzen verantwortlich. Leider können wir keine Haftung für die Korrektheit aller Inhalte auf dieser Website übernehmen, speziell für jene, die seitens Dritter bereitgestellt wurden.</p>
+
+        <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Cafe König</h3>
+                    <p>Inh. Waltraud Merkl</p>
+                    <p>Sackstraße 14, 8010 Graz</p>
+                    <p>+43 (0)316 830326</p>
+                    <p>willkommen@cafe-koenig.at</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Rechtliches</h3>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cafe König. Alle Rechte vorbehalten.</p>
+                <p class="developer-credit">
+                    Developed by <a href="https://dornerlabs.com" target="_blank" rel="noopener noreferrer">DornerLabs</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

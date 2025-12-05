@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cafe König - Kaffeekultur auf höchstem Niveau im Herzen von Graz seit 1918">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Cafe König - Kaffeekultur auf höchstem Niveau</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        // Passwortschutz - Leitet zur Login-Seite um wenn nicht authentifiziert
+        if (sessionStorage.getItem('cafeKoenigAuth') !== 'authenticated') {
+            window.location.href = 'login.html';
+        }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="assets/logo.jpg" alt="Cafe König Logo" class="logo-img">
+                Cafe König
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#geschichte">Geschichte</a></li>
+                <li><a href="#kaffee-abc">Kaffee ABC</a></li>
+                <li><a href="#gutscheine">Gutscheine</a></li>
+                <li><a href="#galerie">Fotogalerie</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Willkommen im Cafe König</h1>
+            <p class="hero-subtitle">Kaffeekultur auf höchstem Niveau</p>
+            <p class="hero-description">Das Cafe König ist nicht einfach nur ein Cafe. Es ist eine Institution im Herzen von Graz. Die Gastgeberin Waltraud Merkl versteht es, allen Wünschen und Anliegen Ihrer Gäste auf liebevolle Weise gerecht zu werden. Behutsam, mit viel Kompetenz und einem einzigartigen Charme führt Sie das Familien-Unternehmen nun schon seit 1999.</p>
+            <a href="#kontakt" class="cta-button">Besuchen Sie uns</a>
+        </div>
+        <div class="hero-image">
+            <img src="assets/welcome_image.jpg" alt="Cafe König Ambiente" class="hero-img">
+        </div>
+    </section>
+
+    <!-- Geschichte Section -->
+    <section id="geschichte" class="geschichte">
+        <div class="container">
+            <h2 class="section-title">Geschichte</h2>
+            <div class="geschichte-content">
+                <div class="geschichte-text">
+                    <p>Der Ursprung des Cafes führt zurück in das Jahr 1918, wo die Cafe-Konditorei Kellermeier gegründet wurde.</p>
+
+                    <p>Am 3. November 1955 wurde das Unternehmen von Othmar König übernommen, welcher direkt an das Cafe eine Bäckerei anschloss und nun seinen Gästen selbsthergestellte und traditionelle Mehlspeisen sowie Backwaren anbieten konnte. Das Cafe wurde im gleichen Jahr auf den Namen <strong>Cafe Konditorei Bäckerei König</strong> umgetauft.</p>
+
+                    <p>Im Jahre 1960 übernahm sein Sohn Viktor König sen. den Familienbetrieb und erweiterte dieses 1976 mit einem zusätzlichen Cafe in der Theodor-Körner-Straße, welches von nun an auch die Produktionsstätte des Konditor- und Bäckereibetriebes war.</p>
+
+                    <p>Seit 1999 führt nun Waltraud Merkl, Tochter von Viktor König sen. das Traditions-Cafe mit einzigartigem Charme, hoher Kompetenz und einer großer Hingabe.</p>
+                </div>
+                <div class="geschichte-image">
+                    <!-- Bild für Geschichte-Sektion - Füge hier dein Bild ein -->
+                    <img src="assets/geschichte.jpg" alt="Geschichte Cafe König - Tradition seit 1918" class="geschichte-img">
+                    <!-- Fallback: Wenn kein Bild vorhanden -->
+                    <!-- <div class="image-placeholder">
+                        <i class="fas fa-landmark"></i>
+                        <p>Tradition seit 1918</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kaffee ABC Section -->
+    <section id="kaffee-abc" class="kaffee-abc">
+        <div class="container">
+            <h2 class="section-title">Kleines Kaffee ABC</h2>
+            <div class="kaffee-grid">
+                <div class="kaffee-card">
+                    <div class="kaffee-icon">☕</div>
+                    <h3>Espresso</h3>
+                    <p>Die Basis aller Kaffeespezialitäten - stark, aromatisch und mit goldener Crema.</p>
+                </div>
+                <div class="kaffee-card">
+                    <div class="kaffee-icon">🥛</div>
+                    <h3>Cappuccino</h3>
+                    <p>Espresso mit aufgeschäumter Milch und einer Haube aus festem Milchschaum.</p>
+                </div>
+                <div class="kaffee-card">
+                    <div class="kaffee-icon">☕</div>
+                    <h3>Melange</h3>
+                    <p>Wiener Klassiker - milder Kaffee mit heißer Milch und Milchschaum.</p>
+                </div>
+                <div class="kaffee-card">
+                    <div class="kaffee-icon">🍫</div>
+                    <h3>Einspänner</h3>
+                    <p>Großer Schwarzer im Glas mit einer Haube aus geschlagener Sahne.</p>
+                </div>
+                <div class="kaffee-card">
+                    <div class="kaffee-icon">☕</div>
+                    <h3>Verlängerter</h3>
+                    <p>Espresso mit heißem Wasser verlängert - für milderen Geschmack.</p>
+                </div>
+                <div class="kaffee-card">
+                    <div class="kaffee-icon">🥄</div>
+                    <h3>Mokka</h3>
+                    <p>Starker, schwarzer Kaffee - die purste Form des Kaffeegenusses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gutscheine Section -->
+    <section id="gutscheine" class="gutscheine">
+        <div class="container">
+            <h2 class="section-title">Gutscheine</h2>
+            <div class="gutscheine-content">
+                <div class="gutscheine-text">
+                    <h3>Verschenken Sie Genuss</h3>
+                    <p>Machen Sie Ihren Liebsten eine Freude mit einem Gutschein für das Cafe König. Ob für einen gemütlichen Kaffeenachmittag, ein ausgiebiges Frühstück oder unsere köstlichen Mehlspeisen - mit unseren Gutscheinen schenken Sie besondere Momente.</p>
+                    <ul class="gutscheine-features">
+                        <li><i class="fas fa-check"></i> Individuell wählbare Beträge</li>
+                        <li><i class="fas fa-check"></i> Sofort verfügbar</li>
+                        <li><i class="fas fa-check"></i> 3 Jahre gültig</li>
+                        <li><i class="fas fa-check"></i> Auch als Geschenkverpackung erhältlich</li>
+                    </ul>
+                    <a href="#kontakt" class="btn-primary">Gutschein anfragen</a>
+                </div>
+                <div class="gutscheine-image">
+                    <!-- Bild für Gutscheine - Füge hier dein Bild ein -->
+                    <img src="assets/gutscheine.jpg" alt="Gutscheine Cafe König" class="gutscheine-img">
+                    <!-- Fallback: Wenn kein Bild vorhanden -->
+                    <!-- <div class="image-placeholder gift">
+                        <i class="fas fa-gift"></i>
+                        <p>Verschenken Sie Genuss</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fotogalerie Section -->
+    <section id="galerie" class="galerie">
+        <div class="container">
+            <h2 class="section-title">Fotogalerie</h2>
+            <p class="gallery-subtitle">Einblicke in unser Cafe</p>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <!-- Galerie Bild 1 - Füge hier dein Bild ein -->
+                    <img src="assets/galerie-1.jpg" alt="Kaffee-Spezialitäten" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <!-- Galerie Bild 2 - Füge hier dein Bild ein -->
+                    <img src="assets/galerie-2.jpg" alt="Hausgemachte Mehlspeisen" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <!-- Galerie Bild 3 - Füge hier dein Bild ein -->
+                    <img src="assets/galerie-3.jpg" alt="Cafe-Ambiente" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <!-- Galerie Bild 4 - Füge hier dein Bild ein -->
+                    <img src="assets/galerie-4.jpg" alt="Torten & Kuchen" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <!-- Galerie Bild 5 - Füge hier dein Bild ein -->
+                    <img src="assets/galerie-5.jpg" alt="Gemütliche Atmosphäre" class="gallery-img">
+                </div>
+                <div class="gallery-item">
+                    <!-- Galerie Bild 6 - Füge hier dein Bild ein -->
+                    <img src="assets/galerie-6.jpg" alt="Frische Backwaren" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Section -->
+    <section id="kontakt" class="kontakt">
+        <div class="container">
+            <h2 class="section-title">Kontakt</h2>
+            <div class="kontakt-grid">
+                <div class="kontakt-info">
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Adresse</h3>
+                        <p>Sackstraße 14<br>8010 Graz</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Telefon</h3>
+                        <p><a href="tel:+43316830326">+43 (0)316 830326</a></p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>E-Mail</h3>
+                        <p><a href="mailto:willkommen@cafe-koenig.at">willkommen@cafe-koenig.at</a></p>
+                    </div>
+                </div>
+                <div class="kontakt-form">
+                    <h3>Schreiben Sie uns</h3>
+                    <form id="contactForm">
+                        <input type="text" name="name" placeholder="Ihr Name" required>
+                        <input type="email" name="email" placeholder="Ihre E-Mail" required>
+                        <input type="tel" name="phone" placeholder="Ihre Telefonnummer">
+                        <textarea name="message" placeholder="Ihre Nachricht" rows="5" required></textarea>
+                        <label class="privacy-checkbox">
+                            <input type="checkbox" name="privacy" required>
+                            <span>Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen und akzeptiere diese.*</span>
+                        </label>
+                        <button type="submit" class="submit-btn">Nachricht senden</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Cafe König</h3>
+                    <p>Inh. Waltraud Merkl</p>
+                    <p>Sackstraße 14, 8010 Graz</p>
+                    <p>+43 (0)316 830326</p>
+                    <p>willkommen@cafe-koenig.at</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Rechtliches</h3>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cafe König. Alle Rechte vorbehalten.</p>
+                <p class="developer-credit">
+                    Developed by <a href="https://dornerlabs.com" target="_blank" rel="noopener noreferrer">DornerLabs</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
