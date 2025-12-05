@@ -24,13 +24,15 @@ This is Matthias Dorner's personal portfolio website showcasing professional exp
 │   ├── icon/              # Favicon files
 │   │   └── dornerlabs-icon-dark.ico
 │   └── projects/          # Project screenshots and images
-└── demos/                 # Portfolio demo websites
-    ├── autohaus/          # Car dealership demo
-    ├── baeckerei/         # Bakery demo
-    ├── cafe/              # Cafe demo
-    ├── friseur/           # Hair salon demo
-    ├── handwerk/          # Craftsman demo
-    └── restaurant/        # Restaurant demo
+├── demos/                 # Portfolio demo websites
+│   ├── autohaus/          # Car dealership demo
+│   ├── baeckerei/         # Bakery demo
+│   ├── cafe/              # Cafe demo
+│   ├── friseur/           # Hair salon demo
+│   ├── handwerk/          # Craftsman demo
+│   └── restaurant/        # Restaurant demo
+└── kunden-demos/          # Client pitch demo websites
+    └── cafe-koenig/       # Cafe König demo (based on real client website)
 ```
 
 ## Development
@@ -216,6 +218,122 @@ Each demo in `demos/` is a standalone website with:
 - Fully functional interactive elements
 - Responsive layouts
 - Can be used as templates for client projects
+
+## Client Demo Websites (kunden-demos/)
+
+The `kunden-demos/` directory contains demo websites created for potential clients who have outdated websites. These demos are used for sales pitches to show clients how their website could look with a modern redesign.
+
+### CRITICAL REQUIREMENTS for Client Demos
+
+**IMPORTANT: Every client demo website MUST include these legal pages (DSGVO-compliant for Austria/EU):**
+
+1. **Impressum (Mandatory)**
+   - Full company/business name and legal form
+   - Owner/operator name
+   - Complete business address
+   - Contact information (phone, email)
+   - Company registration details (if applicable)
+   - Tax/VAT ID (if applicable)
+   - Regulatory authority
+   - Professional association memberships
+   - Legal references (ECG, UGB, GewO, MedienG)
+   - External dispute resolution information
+   - Link from footer to impressum.html
+
+2. **Datenschutzerklärung / Privacy Policy (Mandatory)**
+   - Full DSGVO/GDPR compliance for Austria/EU
+   - Data processing purposes
+   - Legal basis for processing (Art. 6 DSGVO)
+   - Data categories collected
+   - Data storage duration
+   - Third-party services (CDNs, fonts, etc.)
+   - User rights (access, correction, deletion, objection)
+   - Contact information of responsible party
+   - Information about Austrian Data Protection Authority
+   - Cookie policy (if applicable)
+   - Link from footer and contact form to datenschutz.html
+
+3. **Content Preservation**
+   - ALL content from the original website MUST be included
+   - Preserve all text, sections, and information from the old site
+   - Maintain all contact details exactly as they appear
+   - Include all menu items, services, products, etc.
+   - Keep the same page structure (home, about, services, contact, etc.)
+
+### Creating a New Client Demo
+
+When creating a new client demo website, follow these steps:
+
+1. **Analyze the existing client website:**
+   - Note all sections and content
+   - Extract contact information
+   - Check for existing Impressum/Datenschutz (often missing!)
+   - Document all services/products mentioned
+
+2. **Create directory structure:**
+   ```bash
+   mkdir -p kunden-demos/[client-name]/{css,js,images}
+   ```
+
+3. **Build the demo:**
+   - Use modern, responsive design (similar to demos/ examples)
+   - Include ALL original content
+   - Create proper navigation
+   - Add modern features (mobile menu, animations, etc.)
+   - Ensure DSGVO compliance with Impressum and Datenschutz pages
+
+4. **Legal pages:**
+   - Create `impressum.html` with all required business information
+   - Create `datenschutz.html` with comprehensive DSGVO-compliant privacy policy
+   - Link both pages prominently in footer
+   - Add datenschutz link to contact form (with required checkbox)
+
+5. **Test the demo:**
+   - Check all links work
+   - Verify mobile responsiveness
+   - Ensure legal pages are accessible
+   - Confirm all original content is present
+
+### Legal Compliance Notes
+
+- **Austria/EU DSGVO Requirements**: All client demos must be fully compliant with DSGVO (General Data Protection Regulation)
+- **Impressum Pflicht**: Austrian law requires an Impressum on all commercial websites (§ 5 ECG)
+- **Datenschutz Pflicht**: Privacy policy required by DSGVO Art. 13-14
+- **Security**: Always use HTTPS in production, secure forms, protect user data
+- **Apple/iOS Compatibility**: Test on Safari and iOS devices for compatibility
+- **Forms**: Contact forms must include datenschutz checkbox and link
+
+### Example Client Demo: Cafe König
+
+Location: `kunden-demos/cafe-koenig/`
+
+**Original website**: http://www.cafe-koenig.at (outdated, missing legal pages)
+
+**Demo features:**
+- Modern, responsive design with coffee-themed colors
+- All original content preserved (Geschichte, Kaffee ABC, Gutscheine, Fotogalerie)
+- Complete Impressum with all legal requirements
+- Comprehensive DSGVO-compliant Datenschutzerklärung
+- Mobile-friendly navigation
+- Contact form with privacy policy checkbox
+- Smooth animations and modern UX
+
+**Files:**
+- `index.html` - Main page with all sections
+- `impressum.html` - Complete legal notice (ECG, UGB, GewO compliant)
+- `datenschutz.html` - Full DSGVO-compliant privacy policy
+- `css/style.css` - Modern styling
+- `js/script.js` - Interactive features
+
+### Demo Sites
+Each demo in `demos/` is a standalone website with:
+- Independent HTML/CSS/JS files
+- Industry-specific design and content
+- Fully functional interactive elements
+- Responsive layouts
+- Can be used as templates for client projects
+
+**Note**: The `demos/` directory contains generic portfolio demos, while `kunden-demos/` contains specific client pitch demos with real business information.
 
 ## Development Notes
 
