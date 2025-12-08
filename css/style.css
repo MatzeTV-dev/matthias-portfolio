@@ -975,6 +975,29 @@ section {
     color: var(--text-secondary);
 }
 
+.footer-legal {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-legal a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+    color: var(--primary-color);
+}
+
+.footer-legal span {
+    color: var(--text-secondary);
+}
+
 /* ===== Animations ===== */
 @keyframes float {
     0%, 100% {
